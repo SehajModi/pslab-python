@@ -7,7 +7,7 @@ bus. Before running the tests, connect:
     SDI    -> SQ1 and LA4
     SPI.CS -> LA3
 """
-
+from test_config import TEST_FREQUENCY_HZ
 import pytest
 import re
 from numpy import ndarray
@@ -31,7 +31,7 @@ CS = "LA3"
 SPIMaster._primary_prescaler = PPRE = 0
 SPIMaster._secondary_prescaler = SPRE = 0
 # Hardcoded to 1MHz for testing
-PWM_FERQUENCY = 1000000.0 * 2 / 3
+PWM_FERQUENCY = TEST_FREQUENCY_HZ * 2 / 3
 MICROSECONDS = 1e-6
 RELTOL = 0.05
 # Number of expected logic level changes.

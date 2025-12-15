@@ -7,6 +7,7 @@ running the tests, connect:
 """
 
 import pytest
+from test_config import TEST_FREQUENCY_HZ
 
 from pslab.bus.uart import UART
 from pslab.instrument.logic_analyzer import LogicAnalyzer
@@ -17,7 +18,7 @@ WRITE_DATA = 0x55
 TXD2 = "LA1"
 RXD2 = "SQ1"
 # Hardcoded to 1MHz for testing
-PWM_FERQUENCY = 1000000 // 2
+PWM_FREQUENCY = TEST_FREQUENCY_HZ // 2
 MICROSECONDS = 1e-6
 RELTOL = 0.05
 # Number of expected logic level changes.
