@@ -30,7 +30,8 @@ SDI = ["LA4", "SQ1"]
 CS = "LA3"
 SPIMaster._primary_prescaler = PPRE = 0
 SPIMaster._secondary_prescaler = SPRE = 0
-PWM_FERQUENCY = SPIMaster._frequency * 2 / 3
+# Hardcoded to 1MHz for testing
+PWM_FERQUENCY = 1000000.0 * 2 / 3
 MICROSECONDS = 1e-6
 RELTOL = 0.05
 # Number of expected logic level changes.

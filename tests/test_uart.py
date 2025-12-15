@@ -16,7 +16,8 @@ from pslab.connection import SerialHandler
 WRITE_DATA = 0x55
 TXD2 = "LA1"
 RXD2 = "SQ1"
-PWM_FERQUENCY = UART._baudrate // 2
+# Hardcoded to 1MHz for testing
+PWM_FERQUENCY = 1000000 // 2
 MICROSECONDS = 1e-6
 RELTOL = 0.05
 # Number of expected logic level changes.
